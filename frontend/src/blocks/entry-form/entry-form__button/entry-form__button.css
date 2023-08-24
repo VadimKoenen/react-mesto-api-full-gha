@@ -1,0 +1,17 @@
+.entry-form__button {
+    background-color: #fff;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    padding: 14px 84px;
+    margin: 210px 0 0 0;
+    width: 100%;
+    transition: opacity .5s linear;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+
+  .entry-form__button:hover {
+    opacity: 0.6;
+  }

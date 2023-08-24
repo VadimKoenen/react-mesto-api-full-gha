@@ -1,0 +1,15 @@
+.header__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: right;
+    color: #a9a9a9;
+     padding: 0;
+     align-self: start;
+     margin: 0 10px 0 0;
+  }
+
+  .header__text:hover {
+    opacity: .8;
+    transition: opacity .5s linear;
+}

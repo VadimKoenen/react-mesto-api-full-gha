@@ -1,0 +1,9 @@
+/* element */
+.element {
+    border-radius: 3%;
+    overflow: hidden;
+    margin: 0;
+    width: 282px;
+    height: 361px;
+    position: relative;
+}

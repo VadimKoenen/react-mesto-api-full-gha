@@ -1,0 +1,9 @@
+.entry__form-error {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    min-height: 30px;
+    color: #FF0000;
+    padding: 0;
+    margin: 5px 0 0;
+  }
