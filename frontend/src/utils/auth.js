@@ -1,4 +1,4 @@
-export const baseUrl = ['http://localhost:4000', 'http://api.vkoenen.mesto.nomoredomainsicu.ru'];
+export const baseUrl = ['http://localhost:3000', 'http://api.vkoenen.mesto.nomoredomainsicu.ru'];
 
 const checkResponce = (res) =>
   res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
