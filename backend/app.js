@@ -24,7 +24,7 @@ mongoose.Promise = global.Promise;
 // CORS
 app.use(cors({
   origin: [
-    'http://localhost:3000',
+    'http://localhost:4000',
     'https://vkoenen.mesto.nomoredomainsicu.ru',
   ], // порт (потом добавить домен, когда присвоится)
   credentials: true, // куки
