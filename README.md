@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.19.88
+IP 158.160.19.88
 
 Frontend http://vkoenen.mesto.nomoredomainsicu.ru
 
