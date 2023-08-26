@@ -62,17 +62,16 @@ function App() {
 
 
   React.useEffect(() => {
-    if (localStorage.getItem("jwt")) {
-      auth
+        auth
         .checkToken()
         .then((res) => {
           setIsLoggedIn(true);
           navigate("/", { replace: true });
-          setUserEmail(res.data.email);
+          setUserEmail(res.email);
         })
         .catch(console.error);
     }
-  }, []);
+  , []);
 
 
 
@@ -104,7 +103,7 @@ function App() {
 
   //Функции лайка из брифа
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const isLiked = card.likes.some((i) => i === currentUser._id);
     api
       .changeLikeCardStatus(card._id, isLiked)
       .then((newCard) => {

@@ -24,11 +24,10 @@ mongoose.Promise = global.Promise;
 // CORS
 app.use(cors({
   origin: [
-    'http://localhost:3001',
     'https://vkoenen.mesto.nomoredomainsicu.ru',
   ], // порт (потом добавить домен, когда присвоится)
   credentials: true, // куки
-  methods: ['GET', 'PUT', 'POST', 'PATCH', 'DEL'],
+  methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE'],
 }));
 
 app.use(express.json()); // создает наполнение req.body
@@ -63,4 +62,3 @@ app.use(error500);
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
 });
-///

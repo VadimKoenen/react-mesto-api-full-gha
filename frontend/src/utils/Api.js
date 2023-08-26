@@ -73,11 +73,11 @@ class Api {
   }
 
   // удаление лайка
- // removeLike(id) {
- //   return fetch(`${this._baseUrl}/cards/${id}/likes`, {
- //     method: "DELETE",
- //     headers: this._headers,
- //   }).then((res) => this._checkResponce(res));
+  // removeLike(id) {
+  //   return fetch(`${this._baseUrl}/cards/${id}/likes`, {
+  //     method: "DELETE",
+  //     headers: this._headers,
+  //   }).then((res) => this._checkResponce(res));
   //}
 
   //удаление карточки
@@ -97,13 +97,12 @@ class Api {
       headers: this._headers,
     }).then((res) => this._checkResponce(res));
   }
-
-
 }
 
-const api = new Api('https://api.vkoenen.mesto.nomoredomainsicu.ru',
+const api = new Api(
+  'https://api.vkoenen.mesto.nomoredomainsicu.ru',
   {
-   /// authorization: '21c86474-3905-4048-88a1-12bd6a91973a',
+    /// authorization: '21c86474-3905-4048-88a1-12bd6a91973a',
     "Content-Type": "application/json",
   }
 );
