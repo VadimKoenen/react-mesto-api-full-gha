@@ -42,7 +42,7 @@ function App() {
   const navigate = useNavigate();
 
 
-// инициализация мэйн
+  // инициализация мэйн
   React.useEffect(() => {
     if (isLoggedIn) {
       api
@@ -62,16 +62,16 @@ function App() {
 
 
   React.useEffect(() => {
-        auth
-        .checkToken()
-        .then((res) => {
-          setIsLoggedIn(true);
-          navigate("/", { replace: true });
-          setUserEmail(res.email);
-        })
-        .catch(console.error);
-    }
-  , []);
+    auth
+      .checkToken()
+      .then((res) => {
+        setIsLoggedIn(true);
+        navigate("/", { replace: true });
+        setUserEmail(res.email);
+      })
+      .catch(console.error);
+  }
+    , []);
 
 
 
@@ -208,7 +208,7 @@ function App() {
         localStorage.setItem("jwt", res.token);
       })
       .catch((err) => {
-        console.error(err);;
+        console.error(err);
         setIsEntry(false);
         setUserMessage("Что-то пошло не так! Попробуйте ещё раз.");
         setOpenInfoTooltip(true);
@@ -219,10 +219,16 @@ function App() {
   }
 
   function deleteToken() {
-    localStorage.removeItem("jwt");
-    setUserEmail("");
-    setIsLoggedIn(false);
-    navigate("/sign-in", { replace: true });
+    auth
+      .logout()
+      .then(() => {
+        setUserEmail("");
+        setIsLoggedIn(false);
+        navigate("/sign-in", { replace: true });
+      })
+      .catch((err) => {
+        console.error(err);
+      })
   }
 
   ///
@@ -275,7 +281,7 @@ function App() {
               path="/"
               element={
                 <ProtectedRoute
-                element={Main}
+                  element={Main}
                   isLoggedIn={isLoggedIn}
                   onEditProfile={handleEditProfileClick}
                   onAddPlace={handleAddPlaceClick}

@@ -1,4 +1,4 @@
-export const baseUrl = ['https://api.vkoenen.mesto.nomoredomainsicu.ru'];
+export const baseUrl = ['https://api.vkoenen.mesto.nomoredomainsicu.ru']; ///['http://localhost:3000'];
 
 const checkResponce = (res) =>
   res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
@@ -33,5 +33,16 @@ export const login = ({ email, password }) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ email, password }),
+  }).then((res) => checkResponce(res));
+};
+
+
+export const logout = () => {
+  return fetch(`${baseUrl}/signout`, {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
   }).then((res) => checkResponce(res));
 };

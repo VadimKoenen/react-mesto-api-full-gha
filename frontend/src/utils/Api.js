@@ -101,6 +101,7 @@ class Api {
 
 const api = new Api(
   'https://api.vkoenen.mesto.nomoredomainsicu.ru',
+  ///'http://localhost:3000',
   {
     /// authorization: '21c86474-3905-4048-88a1-12bd6a91973a',
     "Content-Type": "application/json",

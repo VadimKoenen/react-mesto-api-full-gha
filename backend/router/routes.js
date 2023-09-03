@@ -6,6 +6,7 @@ const auth = require('../middlewares/auth');
 const {
   login,
   createUser,
+  logout,
 } = require('../controllers/users');
 const {
   signInValidation,
@@ -15,6 +16,7 @@ const { NOT_FOUND } = require('../utils/consts');
 
 router.post('/signin', signInValidation, login);
 router.post('/signup', userValidation, createUser);
+router.get('/signout', logout);
 
 router.use(auth);
 

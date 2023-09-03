@@ -144,3 +144,9 @@ module.exports.getUserData = (req, res, next) => {
     .then((user) => res.send(user))
     .catch(next);
 };
+
+//
+module.exports.logout = (req, res, next) => {
+  res.clearCookie('jwt').send({ message: 'Logout' })
+    .catch(next);
+};
